@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BUCKET_NAME=`cat package.json | grep 's3_bucket_name' | awk -F\" '{print $4}'`
+BUCKET_NAME=`grep 's3_bucket_name' package.json | awk -F\" '{print $4}'`
 
 
 create_s3_bucket() {
